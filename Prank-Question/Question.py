@@ -1,10 +1,10 @@
 from tkinter import *
-from tkinter import messagebox
+import pywhatkit
 import random
 
 def yes():
-    messagebox.showinfo('','Thanks bro')
-    quit()
+    url = "https://youtube.com/shorts/AWOyEIuVzzQ?feature=share"
+    pywhatkit.playonyt(url)
 
 def motionMouse(event):
     btnNo.place(x=random.randint(0, 500), y=random.randint(0, 500))
