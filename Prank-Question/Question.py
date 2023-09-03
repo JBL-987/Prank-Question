@@ -3,10 +3,11 @@ from tkinter import messagebox
 import pywhatkit
 import random
 
+
 def yes():
     if messagebox.askokcancel("Quit", "Lol gay"):
-    root.destroy()
-    url = "https://youtube.be/nZJJ4m18SPg?si=IETjUbzmNKvF5luO"
+        root.destroy()
+    url = "https://youtube.be/Acj5dnnnJOo"
     pywhatkit.playonyt(url)
 
 
