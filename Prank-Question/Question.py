@@ -3,13 +3,9 @@ from tkinter import messagebox
 import pywhatkit
 import random
 
-
-def on_closing():
-    if messagebox.askokcancel("Quit", "Lol gay"):
-        root.destroy()
-
-
 def yes():
+    if messagebox.askokcancel("Quit", "Lol gay"):
+    root.destroy()
     url = "https://youtube.be/nZJJ4m18SPg?si=IETjUbzmNKvF5luO"
     pywhatkit.playonyt(url)
 
@@ -23,6 +19,7 @@ root.title("Question")
 root.geometry("800x800")
 root.resizable(width=False, height=False)
 root['bg'] = 'white'
+root.overrideredirect(True)
 
 label = Label(root, text='Are you Gay?',
               font='Arial 20 bold', bg='white').pack()
@@ -36,5 +33,4 @@ btnNo.bind('<Enter>', motionMouse)
 btnYes = Button(root, text='Yes', font='Arial 20 bold',
                 command=yes).place(x=350, y=400)
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
 root.mainloop()
